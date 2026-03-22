@@ -1,0 +1,34 @@
+name: Question
+description: Ask a cybersecurity question
+title: "[Question] "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No question is too basic. Ask away — that's what this repo is for.
+  - type: textarea
+    id: question
+    attributes:
+      label: Your question
+      description: What would you like to know?
+    validations:
+      required: true
+  - type: dropdown
+    id: experience
+    attributes:
+      label: Your experience level
+      options:
+        - Complete beginner
+        - Some knowledge
+        - Intermediate
+        - Advanced (just curious)
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Any additional context
+      description: What have you already tried or read?
+    validations:
+      required: false
